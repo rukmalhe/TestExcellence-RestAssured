@@ -65,7 +65,8 @@ public class Test {
         headersResponse.put("Content-Type", "application/json; charset=utf-8");
         headersResponse.put("Server", "Cowboy");
 
-        Response response = given(SpecificationBuilder.getRequestSpecification()).body(requestCreateBookings).log().all().
+        Response response =
+                given(SpecificationBuilder.getRequestSpecification()).body(requestCreateBookings).log().all().
                 when().
                 post("/booking").
                 then().
